@@ -32,7 +32,7 @@ your commit messages, whether you break large tasks into smaller ones, etc.). Pl
 do not make a single commit with two weeks’ worth of changes.
 * We expect to be able to run your code locally on our machines. Please ensure you
 include any environment variables necessary to clone and start up your application.
-* We expect a detailed README.md file outlining steps on how to run your project.
+* We expect a detailed README.md file outlining steps on how to run your project (feel free to overwite this one).
 * We will also test the usability of your application from a UX perspective, so please
 ensure your application runs properly.
 * We don’t require that you write in Typescript—this is optional. Plain JavaScript is fine.
