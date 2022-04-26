@@ -10,7 +10,7 @@ Build a Pokedex application using React and Poke API (https://pokeapi.co/). A Po
 indexer for pokemons containing the description of each pokemon and its attributes. The API
 you will consume is the Pokémon API which can be found in this link: https://pokeapi.co/
 
-** The user should be able to search and filter by Pokemons and the Pokemon should have a details page. **
+**The user should be able to search and filter by Pokemons and the Pokemon should have a details page.**
 
 While not required, it would be great if the application allowed:
 
