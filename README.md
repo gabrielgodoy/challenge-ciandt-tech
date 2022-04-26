@@ -4,6 +4,12 @@ Hello, we're excited that you've made this far, we are providing you a boilerpla
 We've added some dependencies like: React, Redux and Material-ui, but the last one you're free to use
 any UI library that you're comfortable with. Please, write all of your code in English.
 
+## Submission Instructions
+
+* Clone the repository.
+* Make your changes.
+* Send us the repo URL after you're finished.
+
 ## Problem description:
 
 Build a Pokedex application using React and Poke API (https://pokeapi.co/). A Pokedex is an
