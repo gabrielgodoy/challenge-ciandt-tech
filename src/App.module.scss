@@ -1,3 +1,52 @@
-.App {
+.outerContainer {
+  background-color: #fff;
+  background-image: url("./assets/images/container-bg.png");
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1220px;
+  min-height: 100vh;
   text-align: center;
+  width: 100%;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  margin: 30px 20px 0;
+  max-width: 1080px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  align-items: center;
+  background: #d42b2b;
+  border-radius: 10px;
+  display: flex;
+  height: 96px;
+  margin: -10px;
+  margin-bottom: 10px;
+  position: relative;
+
+  .headerCorner {
+    margin-top: 27px;
+  }
+
+  .headerTitle {
+    color: #ecd4d3;
+    font-family: "pokemon_solidnormal", sans-serif;
+    font-size: 40px;
+    margin-left: 20px;
+  }
+
+  .search {
+    background: #d9d9d9;
+    border: none;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+    max-width: 245px;
+    width: 100%;
+  }
 }
