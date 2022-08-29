@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'flexo-bolduploaded_file';
+  src: url('./assets/fonts/flexo-bold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/flexo-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pokemon_solidnormal';
+  src: url('./assets/fonts/pokemon_solid-webfont.woff2') format('woff2'),
+    url('./assets/fonts/pokemon_solid-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'flexo-demiuploaded_file';
+  src: url('./assets/fonts/flexo-demi-webfont.woff2') format('woff2'),
+    url('./assets/fonts/flexo-demi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'flexo-thinuploaded_file';
+  src: url('./assets/fonts/flexo-thin-webfont.woff2') format('woff2'),
+    url('./assets/fonts/flexo-thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'flexo-regularuploaded_file';
+  src: url('./assets/fonts/flexo-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/flexo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

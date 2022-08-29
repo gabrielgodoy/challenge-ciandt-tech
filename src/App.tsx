@@ -1,23 +1,13 @@
-import './App.css'
+import { Outlet } from "react-router-dom";
+
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://pokeapi.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gotta Catch'Em All!!!!
-        </a>
-      </header>
+    <div className={styles.App}>
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
