@@ -1,26 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-
-import { TPokemonType } from "../components/PokemonType";
-
-interface PokemonResponse {
-  id: number;
-  name: string;
-  sprites: {
-    other: {
-      "official-artwork": {
-        front_default: string;
-      };
-    };
-  };
-  types: {
-    type: { name: TPokemonType };
-  }[];
-}
+import { PokemonDetails } from "types";
 
 export const usePokemon = (url: string) => {
   const fetchPokemon = async () => {
-    const response = await axios.get<PokemonResponse>(url);
+    const response = await axios.get<PokemonDetails>(url);
     return response.data;
   };
 

@@ -22,7 +22,12 @@ export const PokemonCard = ({ apiUrl }: IPokemonCardProps) => {
         {isLoading ? (
           <CircularProgress />
         ) : (
-          <img src={data?.sprites.other["official-artwork"].front_default} />
+          <img
+            src={
+              data?.sprites.other["official-artwork"].front_default ||
+              data?.sprites.front_default
+            }
+          />
         )}
       </div>
       <div className={styles.details}>
