@@ -1,0 +1,12 @@
+.container {
+  padding-bottom: 50px;
+}
+
+.pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 15px;
+  justify-content: space-between;
+  margin: 38px 0 30px;
+  padding: 0 10px;
+}

@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { API_URL } from "../../../constants";
 
@@ -35,15 +35,15 @@ export const usePokemons = () => {
         if (!data?.next) {
           setHasMoreResults(false);
         }
+        if (responseData?.results.length) {
+          setPokemons((pokemonsState) => [
+            ...pokemonsState,
+            ...responseData.results,
+          ]);
+        }
       },
     },
   );
-
-  useEffect(() => {
-    if (data?.results.length) {
-      setPokemons((pokemonsState) => [...pokemonsState, ...data.results]);
-    }
-  }, [data]);
 
   return {
     pokemons,
