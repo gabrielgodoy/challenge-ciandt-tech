@@ -30,6 +30,13 @@ export type TPokemonType =
   | "unknown"
   | "shadow";
 
+export interface IStat {
+  base_stat: number;
+  stat: {
+    name: string;
+  };
+}
+
 export interface IAbility {
   ability: {
     name: string;
@@ -55,4 +62,5 @@ export interface IPokemonDetails {
   types: {
     type: { name: TPokemonType };
   }[];
+  stats: IStat[];
 }

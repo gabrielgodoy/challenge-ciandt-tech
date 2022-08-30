@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { IAbility, IPokemonDetails } from "types";
+import { IPokemonDetails } from "types";
 import { capitalize } from "utils";
 
 import { PokemonType } from "./../../components/PokemonCard/components/PokemonType";
+import { Stats } from "./components/Stats";
 import styles from "./PokemonDetails.module.scss";
 
 interface ILocationState {
@@ -20,8 +21,6 @@ export const PokemonDetails = () => {
     }
   }, [navigate, state]);
 
-  console.log("state", state);
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -29,7 +28,7 @@ export const PokemonDetails = () => {
         <span className={styles.number}>#{state?.id}</span>
       </div>
 
-      <div className={styles.body}>
+      <div className={styles.columns}>
         <div className={styles.leftColumn}>
           <div className={styles.image}>
             <img
@@ -79,6 +78,14 @@ export const PokemonDetails = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.statsChart}>
+        <Stats
+          data={(state as IPokemonDetails)?.stats.map((stat) => ({
+            category: capitalize(stat.stat.name) as string,
+            value: stat.base_stat,
+          }))}
+        />
       </div>
     </div>
   );

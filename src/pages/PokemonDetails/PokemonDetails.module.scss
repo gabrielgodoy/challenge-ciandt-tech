@@ -16,7 +16,7 @@
     }
   }
 
-  .body {
+  .columns {
     display: flex;
     grid-gap: 20px;
     padding: 0 10px;
@@ -73,5 +73,9 @@
         color: #919191;
       }
     }
+  }
+
+  .statsChart {
+    padding: 20px;
   }
 }
