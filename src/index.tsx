@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App";
 import { Home } from "./pages/Home";
+import { Search } from "./pages/Search";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -28,6 +29,7 @@ root.render(
         <Routes>
           <Route element={<App />} path="/">
             <Route element={<Home />} path="/"></Route>
+            <Route element={<Search />} path="/search/:id" />
           </Route>
         </Routes>
       </BrowserRouter>

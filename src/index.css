@@ -11,6 +11,7 @@ html,
 body {
   background-color: #333333;
   background-image: url(./assets/images/container-bg.png);
+  font-family: "flexo-regularuploaded_file", sans-serif;
   height: 100%;
 }
 

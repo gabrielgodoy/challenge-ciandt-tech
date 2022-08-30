@@ -1,5 +1,6 @@
-.container {
-  padding-bottom: 50px;
+.noResults {
+  font-size: 24px;
+  margin: 40px 0;
 }
 
 .pokemons {
@@ -9,9 +10,4 @@
   justify-content: space-between;
   margin: 38px 0 30px;
   padding: 0 10px;
-
-  &::after {
-    content: "";
-    flex: auto;
-  }
 }

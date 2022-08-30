@@ -13,7 +13,7 @@ export const PokemonCard = ({ apiUrl }: IPokemonCardProps) => {
   const { data, isLoading } = usePokemon(apiUrl);
 
   const handleCardClick = () => {
-    console.log("click!");
+    // TODO: Handle card click
   };
 
   return (

@@ -1,18 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { API_URL } from "consts";
 import { useState } from "react";
-
-import { API_URL } from "../../../constants";
-
-interface Pokemon {
-  name: string;
-  url: string;
-}
-
-interface PokemonsResponse {
-  next: string;
-  results: Pokemon[];
-}
+import { Pokemon, PokemonsResponse } from "types";
 
 export const usePokemons = () => {
   const [nextPageUrl, setNextPageUrl] = useState<null | string>(null);
