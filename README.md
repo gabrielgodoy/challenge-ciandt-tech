@@ -2,9 +2,14 @@
 
 ## Running locally
 
-- Install dependencies
+### Install dependencies
 
-  > npm install
+> npm install
 
-- Run the app
-  > npm start
+### Run the app
+
+> npm start
+
+### Run unit tests
+
+> npm test

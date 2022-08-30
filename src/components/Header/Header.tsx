@@ -40,7 +40,7 @@ export const Header = () => {
         <div className={styles.headerTitle} onClick={() => navigate("/")}>
           PokéDex
         </div>
-        <div className={styles.search}>
+        <div className={styles.search} data-testid="search">
           <form onSubmit={handleSubmit}>
             <InputBase
               inputProps={{ "aria-label": "search google maps" }}
@@ -57,7 +57,11 @@ export const Header = () => {
       </div>
       {(isSearchPath || isPokemonPath) && (
         <div className={styles.subheader}>
-          <div className={styles.backIcon} onClick={() => navigate("/")}>
+          <div
+            className={styles.backIcon}
+            data-testid="back-to-home"
+            onClick={() => navigate("/")}
+          >
             <ArrowBackIcon />
             Back to home
           </div>

@@ -7,11 +7,7 @@ export const usePokemon = (url: string) => {
     const response = await axios.get<IPokemonDetails>(url);
     return response.data;
   };
+  const { data, isError, isLoading } = useQuery(["pokemon", url], fetchPokemon);
 
-  const { data, error, isError, isLoading } = useQuery(
-    ["pokemon", url],
-    fetchPokemon,
-  );
-
-  return { data, error, isError, isLoading };
+  return { data, isError, isLoading };
 };

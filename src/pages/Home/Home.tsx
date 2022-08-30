@@ -19,7 +19,11 @@ export const Home = () => {
               <PokemonCard apiUrl={pokemon.url} key={index} />
             ))}
           </div>
-          <Button onClick={() => refetch()} variant="contained">
+          <Button
+            data-testid="load-more"
+            onClick={() => refetch()}
+            variant="contained"
+          >
             Load more Pokémon
           </Button>
         </>

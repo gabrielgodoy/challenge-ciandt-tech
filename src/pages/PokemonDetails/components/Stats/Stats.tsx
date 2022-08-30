@@ -58,7 +58,7 @@ export const Stats = ({ data }: IStatsProps) => {
     series1.bullets.push(function () {
       return am5.Bullet.new(root, {
         locationY: 1.08,
-        locationX: 0.97,
+        locationX: 1,
         sprite: am5.Label.new(root, {
           text: "{valueXTotal}",
           fill: am5.color(0x000000),

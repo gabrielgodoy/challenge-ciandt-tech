@@ -40,6 +40,11 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!d3-shape|d3-path|@amcharts)"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -53,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.1",
     "@types/react-router-dom": "^5.3.3",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
