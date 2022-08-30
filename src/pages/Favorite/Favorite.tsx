@@ -14,10 +14,16 @@ export const Favorite = () => {
   }, []);
 
   return (
-    <div className={styles.grid}>
-      {favorites?.map((favorite, index) => (
-        <PokemonCard apiUrl={favorite} key={index} />
-      ))}
-    </div>
+    <>
+      {favorites?.length ? (
+        <div className={styles.grid}>
+          {favorites?.map((favorite, index) => (
+            <PokemonCard apiUrl={favorite} key={index} />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.emptyState}>There are no results :(</div>
+      )}
+    </>
   );
 };
