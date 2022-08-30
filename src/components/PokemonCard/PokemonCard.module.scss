@@ -1,5 +1,4 @@
 .container {
-  cursor: pointer;
   margin-bottom: 25px;
   max-width: 200px;
   width: 200px;
@@ -8,6 +7,7 @@
     align-items: center;
     background: #d9d9d9;
     border-radius: 8px;
+    cursor: pointer;
     display: flex;
     height: 200px;
     justify-content: center;
@@ -32,6 +32,19 @@
   display: flex;
   flex-direction: column;
   margin-top: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.upperDetails {
+  align-items: flex-start;
+  display: flex;
+  width: 100%;
+}
+
+.upperText {
+  text-align: left;
+  width: 100%;
 }
 
 .number {
@@ -44,6 +57,11 @@
   color: #313131;
   font-family: "flexo-demiuploaded_file", sans-serif;
   font-size: 23px;
+}
+
+.favorite {
+  color: #e1a127;
+  cursor: pointer;
 }
 
 .types {

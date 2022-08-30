@@ -24,7 +24,6 @@
     background: #d9d9d9;
     border: none;
     border-radius: 30px;
-    margin-left: auto;
     margin-right: 20px;
     max-width: 245px;
     width: 100%;
@@ -46,4 +45,11 @@
     grid-gap: 6px;
     justify-content: center;
   }
+}
+
+.favorite {
+  color: #ecd4d3;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 10px;
 }

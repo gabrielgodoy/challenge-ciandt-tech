@@ -1,6 +1,7 @@
 import "./index.css";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Favorite } from "pages/Favorite";
 import { PokemonDetails } from "pages/PokemonDetails";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -32,6 +33,7 @@ root.render(
             <Route element={<Home />} path="/"></Route>
             <Route element={<Search />} path="/search/:id" />
             <Route element={<PokemonDetails />} path="/pokemon/:id" />
+            <Route element={<Favorite />} path="/favorite" />
           </Route>
         </Routes>
       </BrowserRouter>

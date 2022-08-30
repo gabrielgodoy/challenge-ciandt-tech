@@ -1,5 +1,6 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
+import StarIcon from "@mui/icons-material/Star";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import { ChangeEvent, FormEvent, useState } from "react";
@@ -15,6 +16,7 @@ export const Header = () => {
   const { pathname } = useLocation();
   const isSearchPath = matchPath("/search/:id", pathname);
   const isPokemonPath = matchPath("/pokemon/:id", pathname);
+  const isFavorite = matchPath("/favorite", pathname);
 
   const handleChange = (event: ChangeEvent) => {
     setSearch((event.target as HTMLInputElement).value);
@@ -29,6 +31,10 @@ export const Header = () => {
     navigate(`/search/${search}`);
   };
 
+  const handleFavorite = () => {
+    navigate("/favorite");
+  };
+
   return (
     <>
       <div className={styles.header}>
@@ -39,6 +45,9 @@ export const Header = () => {
         />
         <div className={styles.headerTitle} onClick={() => navigate("/")}>
           PokéDex
+        </div>
+        <div className={styles.favorite} onClick={handleFavorite}>
+          <StarIcon fontSize="large" />
         </div>
         <div className={styles.search} data-testid="search">
           <form onSubmit={handleSubmit}>
@@ -55,7 +64,7 @@ export const Header = () => {
           </form>
         </div>
       </div>
-      {(isSearchPath || isPokemonPath) && (
+      {(isSearchPath || isPokemonPath || isFavorite) && (
         <div className={styles.subheader}>
           <div
             className={styles.backIcon}
