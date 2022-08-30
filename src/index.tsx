@@ -1,6 +1,7 @@
 import "./index.css";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { PokemonDetails } from "pages/PokemonDetails";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -30,6 +31,7 @@ root.render(
           <Route element={<App />} path="/">
             <Route element={<Home />} path="/"></Route>
             <Route element={<Search />} path="/search/:id" />
+            <Route element={<PokemonDetails />} path="/pokemon/:id" />
           </Route>
         </Routes>
       </BrowserRouter>

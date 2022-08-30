@@ -14,6 +14,7 @@ export const Header = () => {
 
   const { pathname } = useLocation();
   const isSearchPath = matchPath("/search/:id", pathname);
+  const isPokemonPath = matchPath("/pokemon/:id", pathname);
 
   const handleChange = (event: ChangeEvent) => {
     setSearch((event.target as HTMLInputElement).value);
@@ -54,7 +55,7 @@ export const Header = () => {
           </form>
         </div>
       </div>
-      {isSearchPath && (
+      {(isSearchPath || isPokemonPath) && (
         <div className={styles.subheader}>
           <div className={styles.backIcon} onClick={() => navigate("/")}>
             <ArrowBackIcon />

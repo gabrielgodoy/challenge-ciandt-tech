@@ -1,4 +1,5 @@
 import CircularProgress from "@mui/material/CircularProgress";
+import { useNavigate } from "react-router-dom";
 
 import { capitalize } from "../../utils";
 import { PokemonType } from "./components/PokemonType";
@@ -10,10 +11,11 @@ interface IPokemonCardProps {
 }
 
 export const PokemonCard = ({ apiUrl }: IPokemonCardProps) => {
+  const navigate = useNavigate();
   const { data, isLoading } = usePokemon(apiUrl);
 
   const handleCardClick = () => {
-    // TODO: Handle card click
+    navigate(`/pokemon/${data?.name}`, { state: data });
   };
 
   return (

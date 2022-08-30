@@ -30,9 +30,20 @@ export type TPokemonType =
   | "unknown"
   | "shadow";
 
-export interface PokemonDetails {
+export interface IAbility {
+  ability: {
+    name: string;
+  };
+  is_hidden: boolean;
+}
+
+export interface IPokemonDetails {
   id: number;
   name: string;
+  abilities: IAbility[];
+  weight: number;
+  height: number;
+  base_experience: number;
   sprites: {
     front_default: string;
     other: {

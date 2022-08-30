@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { PokemonDetails } from "types";
+import { IPokemonDetails } from "types";
 
 export const usePokemon = (url: string) => {
   const fetchPokemon = async () => {
-    const response = await axios.get<PokemonDetails>(url);
+    const response = await axios.get<IPokemonDetails>(url);
     return response.data;
   };
 
