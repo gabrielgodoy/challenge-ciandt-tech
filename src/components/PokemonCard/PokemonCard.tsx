@@ -42,8 +42,14 @@ export const PokemonCard = ({ apiUrl }: IPokemonCardProps) => {
   }, [apiUrl]);
 
   useEffect(() => {
-    handleFavorite();
-  }, [handleFavorite]);
+    const pokemons: string[] = JSON.parse(
+      localStorage.getItem("pokemons") as string,
+    );
+    const isFavorited = pokemons?.includes(apiUrl);
+    if (isFavorited) {
+      setIsFavorite(true);
+    }
+  }, [handleFavorite, apiUrl]);
 
   return (
     <div className={styles.container}>

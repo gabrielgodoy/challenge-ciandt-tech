@@ -1,5 +1,9 @@
 # CI&T Tech Challenge
 
+## Demo
+
+https://newpokedex.surge.sh/
+
 ## Running locally
 
 ### Install dependencies
