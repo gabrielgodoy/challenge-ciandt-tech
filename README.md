@@ -6,6 +6,8 @@
 
 > npm install
 
+If you are receiving an error on install do `npm install --force`
+
 ### Run the app
 
 > npm start
